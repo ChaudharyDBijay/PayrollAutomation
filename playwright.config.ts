@@ -25,7 +25,7 @@ export default defineConfig({
   use: {
     headless: false,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: "https://release-dev.payroll-3gl.pages.dev/",
+    baseURL: "https://payroll-3gl.pages.dev/",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
