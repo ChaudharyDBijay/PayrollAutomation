@@ -136,6 +136,13 @@ export class ActiveEmployeePage {
     await this.popupOkButton.click();
   }
 
+  async verifyEmployeeAlreadyOnboardedAlert() {
+    let message = "Employee already onboarded";
+    await expect(this.popupMessage).toContainText(message);
+    await expect(this.page.getByLabel(message)).toBeVisible();
+    await this.popupOkButton.click();
+  }
+
   async selectCountryToFilter(country: string) {
     await this.filterCompany.click();
     await this.page.getByLabel(country).click();
